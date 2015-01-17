@@ -8,6 +8,7 @@ var gulp        = require('gulp'),
     sass        = require('gulp-sass'),
     minifyCss   = require('gulp-minify-css'),
     typescript  = require('gulp-typescript'),
+    tslint      = require('gulp-tslint'),
     concat      = require('gulp-concat'),
     gulpif      = require('gulp-if'),
     uglify      = require('gulp-uglify'),
@@ -44,7 +45,13 @@ gulp.task('sass', function(){
     .pipe(gulp.dest(dir.scss));
 });
 
-gulp.task('typescript', function(){
+gulp.task('tslint', function(){
+  return gulp.src(['**/*.ts', '!**/*.d.ts'], {cwd: dir.src})
+    .pipe(tslint())
+    .pipe(tslint.report('prose', {emitError: false}));
+});
+
+gulp.task('typescript', ['tslint'], function(){
   return gulp.src(['**/*.ts'], {cwd: dir.src})
     .pipe(gulpif(!production, sourcemaps.init()))
     .pipe(typescript({
@@ -83,7 +90,7 @@ gulp.task('copy', function(){
 
 gulp.task('watch', function(){
   gulp.watch(dir.scss + '**/*.scss', ['sass']);
-  gulp.watch(dir.src  + '**/*.ts',   ['browserify']);
+  gulp.watch(dir.src  + '**/*.ts',   ['typescript']);
 });
 
 gulp.task('compile', ['sass', 'browserify']);

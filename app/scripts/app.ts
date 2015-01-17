@@ -2,17 +2,17 @@
 import Vue = require("vue");
 
 var demo = new Vue({
-    el: '#demo',
+    el: "#demo",
     data: {
-        title: 'todos',
+        title: "todos",
         todos: [
             {
                 done: true,
-                content: 'Learn JavaScript'
+                content: "Learn JavaScript"
             },
             {
                 done: false,
-                content: 'Learn Vue.js'
+                content: "Learn Vue.js"
             }
         ]
     }
