@@ -1,4 +1,4 @@
-﻿/// <reference path="./typings/vue/vue.d.ts"/>
+﻿/// <reference path="./typings/bundle.d.ts"/>
 import Vue = require("vue");
 
 var demo = new Vue({
@@ -17,3 +17,4 @@ var demo = new Vue({
         ]
     }
 });
+

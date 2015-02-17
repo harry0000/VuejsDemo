@@ -11,6 +11,9 @@ node_modules/
 temp/
 dist/
 
+# TypeScript DefinitelyTyped directory
+app/scripts/typings/
+
 # Compiled js and css
 *.js
 *.map
