@@ -1,26 +1,15 @@
 # VuejsDemo
-Vue.js demo with TypeScript, Browserify, and Gulp.
+Vue.js demo with TypeScript and webpack.
 
-## Vuejs demo
+## TodoMVC Example
 
-http://vuejs.org/guide/#A_Quick_Example
+https://vuejs.org/v2/examples/todomvc.html
 
-http://jsfiddle.net/yyx990803/yMv7y/
+https://jsfiddle.net/yyx990803/4dr2fLb7/
 
 # Build
 
 ```
 npm install
-gulp --production
+npm run build
 ```
-
-# Gulp tasks
-
-* (default)
-* tslint
-* typescript
-* browserify
-* sass
-* compile
-* copy
-* watch

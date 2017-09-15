@@ -1,3 +1,5 @@
+.DS_Store
+
 # Logs
 logs
 *.log
@@ -5,22 +7,16 @@ logs
 # Dependency directory
 # Commenting this out is preferred by some people, see
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
-node_modules/
+node_modules
+!node_modules/@types/storejs
 
 # temp and dist directory
 temp/
-dist/
-
-# TypeScript DefinitelyTyped directory
-app/scripts/typings/
 
 # Compiled js and css
 *.js
 *.map
 *.css
-
-# Gulp file
-!gulpfile.js
 
 ## Directory-based project format:
 .idea/

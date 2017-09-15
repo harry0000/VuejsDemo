@@ -1,21 +1,22 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8" />
-  <title>Vue.js Demo</title>
-  <link rel="stylesheet" href="./styles/app.css" type="text/css" />
+  <meta charset="utf-8">
+  <title>Vue.js • TodoMVC</title>
+  <link href="https://unpkg.com/todomvc-app-css@2.0.6/index.css" rel="stylesheet" type="text/css"/>
+  <style>[v-cloak] { display: none; }</style>
 </head>
 <body>
-  <div id="demo">
-    <h1>{{title | uppercase}}</h1>
-    <ul>
-      <li v-repeat="todos"
-          v-on="click: done = !done"
-          class="{{done ? 'done' : ''}}">
-        {{content}}
-      </li>
-    </ul>
-  </div>
-  <script src="./scripts/app.js"></script>
+  <div id="app"></div>
+  <footer class="info">
+    <p>Double-click to edit a todo</p>
+    <p>Written by <a href="http://evanyou.me">Evan You</a></p>
+    <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+  </footer>
+  <script>
+    // for testing
+    if (navigator.userAgent.indexOf('PhantomJS') > -1) localStorage.clear()
+  </script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
