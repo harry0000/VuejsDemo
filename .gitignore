@@ -17,6 +17,7 @@ temp/
 *.js
 *.map
 *.css
+!webpack.config.js
 
 ## Directory-based project format:
 .idea/
